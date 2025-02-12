@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon" />
+    <title>Những kỷ niệm đẹp nhất</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: #ffe4e1;
+        font-family: "Arial", sans-serif;
+      }
+      h1 {
+        color: #ff69b4;
+        font-size: 2em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .slideshow-container {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+      }
+      img {
+        width: 80%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        border: 5px solid #ff69b4;
+        transition: opacity 1s ease-in-out;
+      }
+      .heart {
+        font-size: 24px;
+        color: #ff69b4;
+        animation: heartbeat 1.5s infinite;
+      }
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+      .btn {
+        --color: #e80097;
+        font-family: inherit;
+        display: inline-block;
+        width: 8em;
+        height: 2.6em;
+        line-height: 2.5em;
+        margin: 20px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        border: 2px solid var(--color);
+        transition: color 0.5s;
+        z-index: 1;
+        font-size: 17px;
+        border-radius: 6px;
+        font-weight: 500;
+        color: var(--color);
+      }
+
+      .btn :before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: var(--color);
+        height: 150px;
+        width: 200px;
+        border-radius: 50%;
+      }
+
+      .btn :hover {
+        color: #fbf5fa;
+      }
+
+      .btn :before {
+        top: 100%;
+        left: 100%;
+        transition: all 0.7s;
+      }
+
+      .btn :hover:before {
+        top: -30px;
+        left: -30px;
+      }
+
+      .btn :active:before {
+        background: #e12faf;
+        transition: background 0s;
+      }
+      .btn a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The most beautiful memories 💖</h1>
+    <div class="slideshow-container">
+      <img id="slideshow" src="thang5.png"Hình ảnh dễ thương" />
+      <img
+        id="slideshow"
+        src="Screenshot 2025-02-10 130439.png"
+        alt="Hình ảnh dễ thương"
+      />
+      <img
+        id="slideshow"
+        src="https://scontent.xx.fbcdn.net/v/t1.15752-9/476216983_579516558255038_6018399156136716298_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=-wxRDBgvIewQ7kNvgF7vu9W&_nc_oc=Adi_naDc_0DJ8aCNDAH_aNV4_tIb73mi3Facueo5g0gxBkUtM8II3PksvmeKr2KoGqMXXxH_PjIU4VAiQEs3rT6Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHLBe7UGDGU_3EG1e2S6yHt63-HackVtXO-BV6RcKHx2Q&oe=67CE2905"
+        alt="Hình ảnh dễ thương"
+      />
+      <img id="slideshow" src="bunbo.png" alt="Hình ảnh dễ thương" />
+      <img id="slideshow" src="banh.png" alt="Hình ảnh dễ thương" />
+      <img id="slideshow" src="matcha.png" alt="Hình ảnh dễ thương" />
+      <img id="slideshow" src="bunrieu.png" alt="Hình ảnh dễ thương" />
+      <img id="slideshow" src="letter.png" alt="Hình ảnh dễ thương" />
+    </div>
+    <p class="heart">💗💗💗</p>
+    <div class="footer">
+      <button class="btn"><a href="loveyou.html">Click here babiii</a></button>
+    </div>
+
+    <script>
+      const images = [
+        "thang5.png",
+        "Screenshot 2025-02-10 130439.png",
+        "https://scontent.xx.fbcdn.net/v/t1.15752-9/476216983_579516558255038_6018399156136716298_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=-wxRDBgvIewQ7kNvgF7vu9W&_nc_oc=Adi_naDc_0DJ8aCNDAH_aNV4_tIb73mi3Facueo5g0gxBkUtM8II3PksvmeKr2KoGqMXXxH_PjIU4VAiQEs3rT6Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1gHLBe7UGDGU_3EG1e2S6yHt63-HackVtXO-BV6RcKHx2Q&oe=67CE2905",
+        "bunbo.png",
+        "banh.png",
+        "matcha.png",
+        "bunrieu.png",
+        "letter.png",
+      ];
+      let index = 0;
+
+      function changeImage() {
+        index = (index + 1) % images.length;
+        const imgElement = document.getElementById("slideshow");
+        imgElement.style.opacity = 0;
+        setTimeout(() => {
+          imgElement.src = images[index];
+          imgElement.style.opacity = 1;
+        }, 500);
+      }
+
+      setInterval(changeImage, 3000);
+    </script>
+  </body>
+</html>

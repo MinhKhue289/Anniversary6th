@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon" />
+    <title>Valentine đầu tiên cùng với nhau</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        color: rgb(235, 67, 129);
+      }
+
+      .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+
+      .heart {
+        font-size: 5rem;
+        animation: beat 1s infinite;
+      }
+
+      @keyframes beat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+
+      /* .btn {
+        background: #ff6f61;
+        border: none;
+        padding: 50px 60px;
+        font-size: 1.2rem;
+        color: #fff;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: #ff3b2f;
+      } */
+
+      .hidden {
+        display: none;
+      }
+
+      .message {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+      .btn {
+        --color: #e80097;
+        font-family: inherit;
+        display: inline-block;
+        width: 8em;
+        height: 2.6em;
+        line-height: 2.5em;
+        margin: 20px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        border: 2px solid var(--color);
+        transition: color 0.5s;
+        z-index: 1;
+        font-size: 17px;
+        border-radius: 6px;
+        font-weight: 500;
+        color: var(--color);
+      }
+
+      .btn :before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: var(--color);
+        height: 150px;
+        width: 200px;
+        border-radius: 50%;
+      }
+
+      .btn :hover {
+        color: #fbf5fa;
+      }
+
+      .btn :before {
+        top: 100%;
+        left: 100%;
+        transition: all 0.7s;
+      }
+
+      .btn :hover:before {
+        top: -30px;
+        left: -30px;
+      }
+
+      .btn :active:before {
+        background: #e12faf;
+        transition: background 0s;
+      }
+      .btn a {
+        text-decoration: none;
+      }
+      .airplane {
+        position: absolute;
+        top: 50%;
+        left: -100px;
+        width: 100px;
+ 
+        transition: transform 5s linear;
+      }
+      .location {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .dalat {
+        left: 20px;
+      }
+      .hanoi {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="location dalat">Đà Lạt</div>
+    <div class="location hanoi">Hà Nội</div>
+    <img
+      src="airplane-cartoon-1301493-removebg-preview.png"
+      alt="Airplane"
+      class="airplane"
+      id="plane"
+    />
+    <div class="container">
+      <h1>Valentine đầu tiên cùng em! 💖</h1>
+      <p>Nhấn vào trái tim này để nghe chồng tâm hự nhenn!!</p>
+      <div class="heart" onclick="showMessage()">❤️</div>
+      <div id="loveMessage" class="hidden message">
+        <p>Anh yêu em nhiều lắm! 💌</p>
+        <p>
+          Valentine này, anh muốn nói rằng embe chính là món quà tuyệt vời nhất
+          mà anh có được. Mỗi ngày bên embe đều là một ngày tràn ngập yêu thương
+          và hạnh phúc. Anh hứa sẽ luôn yêu thương, trân trọng và che chở cho
+          embe..dù đôi khi anh vẫn khờ và làm ebe phải suy nghĩ nhiều nhắm,
+          nhưng anh hứa anh sẽ vì ebe mà thay đổi những thói xấu và anh hứa anh
+          sẽ tốt lênnn vì ebeeeee >33 Chúc embe một ngày Valentine ngọt ngào như
+          nụ cười của em, ấm áp như vòng tay anh và hạnh phúc như tình yêu của
+          đôi ta nhéeee!!! Yêu embe thật nhiều! ❤️"
+          <br />
+          <video width="640" height="360" controls>
+            <source
+              src="Black and Gray Classic Love Quote Mobile Video.mp4"
+              type="video/mp4"
+            />
+            <source src="video.webm" type="video/webm" />
+            Trình duyệt của bạn không hỗ trợ thẻ video.
+          </video>
+          <div class="footer">
+            <button class="btn"><a href="showanh.html">Click here babiii</a></button>
+          </div>
+        </p>
+      </div>
+    </div>
+    
+
+    <script>
+      function showMessage() {
+        const message = document.getElementById("loveMessage");
+        message.classList.remove("hidden");
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        let plane = document.getElementById("plane");
+        setTimeout(() => {
+          plane.style.transform = "translateX(100vw)";
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

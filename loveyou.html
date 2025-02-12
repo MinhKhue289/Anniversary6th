@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anh iu em</title>
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon" />
+    <style>
+      body {
+        text-align: center;
+        background-color: #f9d9e1;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 20px;
+        color:#ff4081;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      .character {
+        display: inline-block;
+        margin: 20px;
+        text-align: center;
+      }
+      .character img {
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+      }
+      .speech {
+        margin-top: 10px;
+        background: #fff;
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        color: #ff4081;
+      }
+      .big-img img {
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+      }
+
+    
+      .airplane {
+        position: absolute;
+        top: 50%;
+        left: -100px;
+        width: 100px;
+ 
+        transition: transform 5s linear;
+      }
+      .location {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .dalat {
+        left: 20px;
+      }
+      .hanoi {
+        right: 20px;
+      }
+      header {
+        top:0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="location dalat">Đà Lạt</div>
+      <div class="location hanoi">Hà Nội</div>
+      <img
+        src="airplane-cartoon-1301493-removebg-preview.png"
+        alt="Airplane"
+        class="airplane"
+        id="plane"
+      />
+      <h1 style="color: #ff4081">Những lời nhắn nhủ của tớ</h1>
+    </header>
+    <div class="container">
+      
+      <div class="character">
+        <img
+          src="https://www.sanrio.com.hk/_ul/character_profile_pompompurin.png"
+          alt="Pompompurin"
+        />
+        <div class="speech">ANH YÊU EM NHIỀU LẮM</div>
+      </div>
+      <div class="character">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLYgydrFWtiKTTVUIT2lFGrYPADX501d0U0w&s"
+          alt="Chikawa"
+        />
+        <div class="speech">EM PHẢI MẠNH MẼ LÊN</div>
+      </div>
+      <div class="character">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnxZFTAeWAWdRkWibuA0mEB6lHww109Rmiy8LWt8UWzBpxMIoVNIBARudW7B-Av67xOsM&usqp=CAU"
+          alt="Cinnamoroll"
+        />
+        <div class="speech">CHÚNG MÌNH NHẤT ĐỊNH SẼ LÀM ĐƯỢC</div>
+      </div>
+      <div class="character">
+        <img
+          src="https://w7.pngwing.com/pngs/933/306/png-transparent-sticker-facebook-pin-decal-bun-facebook-love-heart-pin.png"
+          alt="Cinnamoroll"
+        />
+        <div class="speech">CHÚNG MÌNH NHẤT ĐỊNH SẼ LÀM ĐƯỢC</div>
+      </div>
+      <div class="character">
+        <img
+          src="https://i.pinimg.com/564x/06/9d/a6/069da6ff2fc1a281d4f4bf453bb06d4a.jpg"
+          alt="Cinnamoroll"
+        />
+        <div class="speech">CHỈ CẦN MÌNH CÓ NIỀM TIN VÀO TÌNH YÊU NÀY</div>
+      </div>
+      <div class="big-img">
+
+      <div class="big-img">
+        <img
+          src="https://ih1.redbubble.net/image.4709443044.7893/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+        />
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let plane = document.getElementById("plane");
+        setTimeout(() => {
+          plane.style.transform = "translateX(100vw)";
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

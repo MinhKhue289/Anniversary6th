@@ -1,0 +1,215 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("https://via.placeholder.com/1920x1080") no-repeat center
+    center/cover;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-content button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #d18a90;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-content button:hover {
+  background: #d74e62;
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-section h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #fff;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  position: relative;
+}
+
+.timeline-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.timeline-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+/* From Uiverse.io by cssbuttons-io */
+.btn {
+  --color: #e80097;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.btn :before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.btn :hover {
+  color: #fbf5fa;
+}
+
+.btn :before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.btn :hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.btn :active:before {
+  background: #e12faf;
+  transition: background 0s;
+}
+.btn a {
+  text-decoration: none;
+}
+.airplane {
+  position: absolute;
+  top: 10%;
+  left: -100px;
+  width: 100px;
+
+  transition: transform 5s linear;
+}
+.location {
+  position: absolute;
+  top: 10%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: bold;
+}
+.dalat {
+  left: 20px;
+}
+.hanoi {
+  right: 20px;
+}
